@@ -1,0 +1,21 @@
+body {
+    margin: 0;    
+    background-repeat: no-repeat;
+    background-color: #cccccc;
+    height: 800px;
+    background-position: bottom  -55px left 350px;
+    background-size: 1000px 700px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: x-large;
+    
+
+}
+
+.error{
+    outline: 1px solid red;
+} 
+.button {
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+  }
