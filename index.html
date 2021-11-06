@@ -2,8 +2,8 @@
 <html>
    <head>
     <meta charset="utf-8">
- <!--   <script src="scripts/jQuery.js" charset="utf-8"></script>
-    <script src="scripts/client.js" charset="utf-8"></script> -->
+    <script src="scripts/jquery.js" charset="utf-8"></script>
+    <script src="scripts/client.js" charset="utf-8"></script>
     <link rel="stylesheet" href="styles/style.css">
     <title>Salary Calculator</title>
   </head>
@@ -23,8 +23,49 @@
         
       
   <h2>Employees</h2>
-  <ul id ="carGarageOut">    
-  </ul>
-  
+  <table>
+   <!-- This is our table header. These column names never change!
+   See the comment above <tbody>. 😄 -->
+   <thead>
+     <tr>
+       <th>First Name</th>
+       <th>Last Name</th>
+       <th>ID</th>
+       <th>Title</th>
+       <th>Annual Salary</th>
+     </tr>
+   </thead>
+   
+   <!-- This is our table body. The data inside here is dynamic. Using <tbody> is
+   an elegant way to solve the problem of "clearing out the table except
+   for the table header". (Remember Friday when you saw Matt fail hard at
+   using jQuery to clear out a table except for the top row? He gave up
+   and admitted he should've just used <thead> and <tbody> in the first place.) -->
+   <tbody id="hobby-table-body">
+     <tr>
+       <td>Dude</td>
+       <td>Serious</td>
+       <td>5464</td>
+       <td>Fulltime Slacker</td>
+       <td>65000</td>
+     </tr>
+     <tr>
+       <td>Bob</td>
+       <td>Jones</td>
+       <td>6643</td>
+       <td>Team Lead</td>
+       <td>75000</td>
+     </tr>
+   </tbody>
+ </table>
+
+ <!-- 
+ <tfoot>Didn't use this in our app. But it's a thing. 🚀</tfoot>
+ -->
+ <h5>Total Monthly: <span id="total-monthly"></span></h5>
+ 
+
+</body>
+</html>
   </body>
 </html>
