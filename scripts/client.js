@@ -36,6 +36,7 @@ function renderHobbyItems(itemsToRender) {
         <td>${hobbyItem.nameid}</td>
         <td>${hobbyItem.nametitle}</td>
         <td>${hobbyItem.salary}</td>
+        <td><button>Delete</button></td>
       </tr>
     `;
 
