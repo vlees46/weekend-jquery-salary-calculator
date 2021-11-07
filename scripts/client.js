@@ -15,6 +15,7 @@ function onReady() {
   // Create one event listener that will fire off our
   // handleAddItemClick each time a user clicks '#add-item-button':
   $('#submit').on('click', handleAddItemClick);
+  
 }
 
 
@@ -36,11 +37,12 @@ function renderHobbyItems(itemsToRender) {
         <td>${hobbyItem.nameid}</td>
         <td>${hobbyItem.nametitle}</td>
         <td>${hobbyItem.salary}</td>
-        <td><button>Delete</button></td>
+        <td><button class="btnDelete">Delete</button></td>
       </tr>
     `;
 
     $('#hobby-table-body').append(newTableRow);
+    
   }
 }
 
@@ -51,6 +53,11 @@ function renderTotalPrice(itemsToSum) {
  let totalPrice = calculateTotalPrice(itemsToSum);
   // Update our '#total-price' <h5> with the current totalPrice value:
 $('#total-monthly').text(totalPrice);
+$('#hobby-table-body').on('click', '.btnDelete', function () {
+  $(this).closest('tr').remove();
+
+});
+
 }
 
 // Takes in our hobbyItems array and returns
@@ -100,4 +107,9 @@ function handleAddItemClick() {
   // call your renderHobbyItems function, you clever boy
   renderHobbyItems(hobbyItems);
   renderTotalPrice(hobbyItems);
+  
+  
 }
+  // handles deleting employee from table
+     
+
