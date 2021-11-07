@@ -11,9 +11,6 @@ body {
 
 }
 
-.error{
-    outline: 1px solid red;
-} 
 .button {
     text-align: center;
     text-decoration: none;
